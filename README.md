@@ -33,8 +33,11 @@ Recursion is a fundamental concept in computer science, widely used in algorithm
 Recursion allows problems to be broken down into simpler sub-problems, providing elegant and concise solutions. It is commonly used in algorithms related to:
 
 ◾ Mathematical calculations (e.g., factorial, Fibonacci)
+
 ◾ Data Structures (e.g., tree traversal, backtracking)
+
 ◾ Optimization problems (e.g., dynamic programming, divide and conquer)
+
 While recursion can be memory-intensive, its clear, intuitive approach often simplifies problem-solving, making it a valuable tool for any programmer.
 
 ## How to Use This Repository
