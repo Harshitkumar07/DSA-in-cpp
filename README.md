@@ -36,7 +36,7 @@ Recursion can often simplify the solution of a problem by reducing the code comp
 
 1. **Clone the Repository**: You can clone this repository to your local machine using:
    ```bash
-   git clone https://github.com/Harshitkumar07/dsa-in-cpp.git
+   git clone https://github.com/Harshitkumar07/Dsa-in-cpp.git
    ```
    
 2. **Navigate to Specific Problems**: The repository is organized by problem categories. Each problem is located in its respective folder with the solution in a `.cpp` file. For example:
@@ -66,3 +66,6 @@ Contributions are welcome! If you'd like to add new recursive problems or improv
 5. Open a pull request
 
 Please make sure your code follows proper formatting, and include comments explaining your recursive approach.
+
+Star ⭐ the repo if you find it useful!
+If you like the repository or find it helpful for your learning or interview preparation, don’t forget to star it on GitHub!
