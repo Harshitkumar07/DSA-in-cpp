@@ -36,12 +36,11 @@ Recursion can often simplify the solution of a problem by reducing the code comp
 
 1. **Clone the Repository**: You can clone this repository to your local machine using:
    ```bash
-   git clone https://github.com/your-username/recursion-dsa-cpp.git
+   git clone https://github.com/Harshitkumar07/dsa-in-cpp.git
    ```
    
 2. **Navigate to Specific Problems**: The repository is organized by problem categories. Each problem is located in its respective folder with the solution in a `.cpp` file. For example:
    - `problems/factorial.cpp`
-   - `problems/fibonacci.cpp`
    
 3. **Understand the Solution**: Each solution is well-commented for clarity. Make sure to read through the comments for a better understanding of the recursive logic used.
 
