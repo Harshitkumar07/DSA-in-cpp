@@ -8,7 +8,10 @@ Welcome to DSA in C++, a curated collection of data structures and algorithms (D
  📚 Table of Contents
 
 - [Introduction](#introduction)
+- [Folder Structure](#folder-structure)
+- [Overview](#overview)
 - [How to Use This Repository](#how-to-use-this-repository)
+- [Features ](#features)
 - [Topics covered](#topics-covered)
 - [Contributing](#contributing)
 
@@ -18,6 +21,18 @@ Welcome to DSA in C++, a curated collection of data structures and algorithms (D
 ◾ Each problem is organized in its own folder with multiple solution files (e.g., recursive, iterative, dynamic programming, etc.).
 
 ◾ A README file is provided for each problem, explaining the solution in detail.
+
+📝 Overview
+
+This repository serves as a resource for those learning and practicing DSA concepts through coding problems. Each problem includes:
+
+◾ Explanation of the approach
+
+◾ C++ code solution with comments
+
+◾ Time and space complexity analysis
+
+◾ Different methods used to solve the problem (e.g., recursive, iterative, dynamic programming, etc.)
 
 
 📖 How to Use This Repository
