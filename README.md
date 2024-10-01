@@ -5,7 +5,7 @@ Welcome to DSA in C++, a curated collection of data structures and algorithms (D
 🔍 Whether you're preparing for coding interviews, enhancing your problem-solving skills, or deepening your knowledge of DSA, this repository is designed for you!
 
 
- 📚 Table of Contents
+ 📚 Table of Contents - 
 
 - [Introduction](#introduction)
 - [Folder Structure](#folder-structure)
@@ -16,13 +16,13 @@ Welcome to DSA in C++, a curated collection of data structures and algorithms (D
 - [Contributing](#contributing)
 
 
-📂 Folder Structure
+📂 Folder Structure - 
 
 ◾ Each problem is organized in its own folder with multiple solution files (e.g., recursive, iterative, dynamic programming, etc.).
 
 ◾ A README file is provided for each problem, explaining the solution in detail.
 
-📝 Overview
+📝 Overview - 
 
 This repository serves as a resource for those learning and practicing DSA concepts through coding problems. Each problem includes:
 
@@ -35,7 +35,7 @@ This repository serves as a resource for those learning and practicing DSA conce
 ◾ Different methods used to solve the problem (e.g., recursive, iterative, dynamic programming, etc.)
 
 
-📖 How to Use This Repository
+📖 How to Use This Repository - 
 
 1. **Clone the Repository**: You can clone this repository to your local machine using:
    ```bash
@@ -53,7 +53,7 @@ This repository serves as a resource for those learning and practicing DSA conce
    ./output
    ```
 
-🚀 Features
+🚀 Features -
 
 ◾ Multiple Coding Methods: Solutions to problems are provided using different coding techniques such as recursion, iteration, greedy algorithms, and more.
 
@@ -62,7 +62,7 @@ This repository serves as a resource for those learning and practicing DSA conce
 ◾ Optimized Solutions: Efforts are made to provide the most efficient solutions possible, with complexity analysis provided for each approach.
 
 
-📚 Topics Covered
+📚 Topics Covered - 
 
 This repository covers a wide range of methos and topics, including:
 
@@ -71,7 +71,7 @@ This repository covers a wide range of methos and topics, including:
 More topics will be added soon!
 
 
-🤝 Contributing
+🤝 Contributing -
 
 Contributions are welcome! If you'd like to add new recursive problems or improve the solutions, feel free to fork the repository and submit a pull request.
 
