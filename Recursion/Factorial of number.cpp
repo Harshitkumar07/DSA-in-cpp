@@ -35,12 +35,12 @@ int main() {
 
 //Example Inputs and Outputs:
 
-//1. Input: 5
-  // Output: Factorial of 5 is 120
+//1. Input: Enter a number: 5
+  // Output: Factorial of 5 is : 120
 
-//2. Input: 0
-  // Output: Factorial of 0 is 1
+//2. Input: Enter a number: 0
+  // Output: Factorial of 0 is : 1
 
-//3. Input: 7
-  // Output: Factorial of 7 is 5040
+//3. Input: Enter a number: 7
+  // Output: Factorial of 7 is : 5040
 
