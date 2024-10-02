@@ -1,4 +1,4 @@
-Problem Statement:
+/*Problem Statement:
 Check if a number is prime using recursion.
 
 Approach:
@@ -8,7 +8,7 @@ Approach:
 ◾ Recursive Case:
   ◾ Check divisibility by all numbers from 2 to sqrt(n).
 
-Code : 
+Code : */
 
 #include<iostream>
 using namespace std;
@@ -16,37 +16,37 @@ using namespace std;
 bool isPrime(int n, int i = 2) {
     if (n <= 2)
        return (n == 2);
-    if (n % i == 0) 
+    if (n % i == 0)
        return false;
-    if (i * i > n) 
+    if (i * i > n)
        return true;
     return isPrime(n, i + 1);
 }
 
 int main() {
     int n;
-    cout << "Enter a number: ";
+    cout << "Enter a number : ";
     cin >> n;
     if (isPrime(n))
-        cout << n << " is prime" << endl;
+        cout << n << " is prime." << endl;
     else
-        cout << n << " is not prime" << endl;
+        cout << n << " is not prime." << endl;
     return 0;
 }
 
-◾ Time Complexity: O(sqrt(n))
-    
+/*◾ Time Complexity: O(sqrt(n))
+
 The function checks divisibility only up to the square root of n, leading to a time complexity of O(sqrt(n)).
 
 ◾ Space Complexity: O(sqrt(n))
-    
+
 The recursion depth is proportional to the square root of n because it checks divisibility incrementally up to that point.
 
 
 Example Inputs and Outputs:
 
-1. ◾ Input: n = 7
+1. ◾ Input: Enter a number :  7
    ◾ Output: 7 is prime.
 
-2. ◾ Input: n = 10
-   ◾ Output: 10 is not prime.
+2. ◾ Input: Enetr a number :  10
+   ◾ Output: 10 is not prime.*/
