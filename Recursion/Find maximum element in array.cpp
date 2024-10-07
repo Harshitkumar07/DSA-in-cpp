@@ -1,3 +1,17 @@
+/*
+Problem Statement:
+Find the maximum element in an array using recursion.
+
+Approach:
+Base Case:
+If the array has only one element, return that element.
+
+Recursive Case:
+Return the maximum of the first element and the maximum of the rest of the array.
+
+Code -
+*/
+
 #include<iostream>
 using namespace std;
 
@@ -19,3 +33,27 @@ int main() {
     cout << "Maximum element: " << findMax(arr, n) << endl;
     return 0;
 }
+/*
+Time Complexity:
+ The time complexity is O(n) as each element is visited once.
+
+Space Complexity:
+ The space complexity is O(n) for the recursion stack.
+
+Example Inputs and Outputs:
+1. Input: Enter number of elements: 5
+          Enter elements: 3
+          9
+          5
+          6
+          2
+   Output: Maximum element in the array: 9
+
+2. Input: Enter number of elements: 4
+          Enter elements: 3
+          1
+          3
+          5
+   Output: Maximum element in the array: 5
+
+*/
