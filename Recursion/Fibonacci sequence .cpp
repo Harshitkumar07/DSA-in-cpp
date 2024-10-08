@@ -1,17 +1,18 @@
-/*Problem Statement:
+/*
+Problem Statement:
 Find the nth Fibonacci number using recursion.
 
 Approach:
 
 The Fibonacci sequence is defined as:
+  1. Fib(0) = 0, Fib(1) = 1, and Fib(n) = Fib(n-1) + Fib(n-2) for n >= 2.
 
-1. Fib(0) = 0, Fib(1) = 1, and Fib(n) = Fib(n-1) + Fib(n-2) for n >= 2.
+  2. Base Cases: If n == 0, return 0; if n == 1, return 1.
 
-2. Base Cases: If n == 0, return 0; if n == 1, return 1.
+  3. Recursive Case: For n > 1, return Fib(n-1) + Fib(n-2).
 
-3. Recursive Case: For n > 1, return Fib(n-1) + Fib(n-2).
-
-Code:*/
+Code -
+*/
 
 #include<iostream>
 using namespace std;
@@ -32,11 +33,12 @@ int main() {
     return 0;
 }
 
-/* Time Complexity:
-◾ O(2^n) because at each step, two recursive calls are made, leading to exponential growth.
+/* 
+Time Complexity:
+  ◾ O(2^n) because at each step, two recursive calls are made, leading to exponential growth.
 
 Space Complexity:
-◾ O(n) due to the depth of the recursion stack, which can go up to n.
+  ◾ O(n) due to the depth of the recursion stack, which can go up to n.
 
 Example Inputs and Outputs:
 1. Input: Enter the number : 5
@@ -46,4 +48,5 @@ Example Inputs and Outputs:
    Output: Fibonacci of 10 is 55
 
 3. Input: Enter the number : 0
-   Output: Fibonacci of 0 is 0 */
+   Output: Fibonacci of 0 is 0 
+*/
