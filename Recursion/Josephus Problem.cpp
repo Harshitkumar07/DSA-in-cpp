@@ -1,5 +1,4 @@
 /*
-
 Problem Statement:
 A group of people stand in a circle, and every k-th person is eliminated until only one person remains.
 
@@ -12,6 +11,7 @@ Approach:
    Josephus(n) = (Josephus(n-1) + k) % n
    where Josephus(1) = 0.
 
+Code - 
 */
 #include<iostream>
 using namespace std;
