@@ -26,6 +26,5 @@ Recursion is a powerful technique where a function calls itself to solve smaller
 Some common topics covered using recursion include:
 - **Array & String Recursion** (e.g., reversing arrays, string permutations)
 - **Divide and Conquer** (e.g., merge sort, quick sort)
-- **Dynamic Programming** (e.g., Fibonacci, knapsack problem)
 - **Backtracking** (e.g., N-Queens, sudoku solver)
 - Other types of problem will be soon updated..
