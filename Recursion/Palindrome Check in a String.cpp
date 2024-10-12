@@ -50,13 +50,13 @@ int main()
 
 Example Inputs and Outputs:
 
-1. Input: "racecar"
+1. Input: Enter a string: racecar
    Output: racecar is a palindrome.
 
-2. Input: "hello"
+2. Input: Enter a string: hello
    Output: hello is not a palindrome.
 
-3. Input: "madam"
+3. Input: Enter a string: madam
    Output: madam is a palindrome.
 
 */
