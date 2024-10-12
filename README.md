@@ -1,6 +1,6 @@
 📚 DSA in C++: Comprehensive Problem-Solving Solutions
 
-Welcome to DSA in C++, a curated collection of data structures and algorithms (DSA) problem solutions. This repository focuses on solving a variety of coding challenges using different methods in C++, including recursive, iterative, dynamic programming, and more.
+Welcome to DSA in C++, a collection of data structures and algorithms (DSA) problem solutions. This repository focuses on solving a variety of coding challenges using different methods in C++, including recursive, iterative, dynamic programming, and more.
 
 🔍 Whether you're preparing for coding interviews, enhancing your problem-solving skills, or deepening your knowledge of DSA, this repository is designed for you!
 
