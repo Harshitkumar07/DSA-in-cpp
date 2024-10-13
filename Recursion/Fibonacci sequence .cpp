@@ -17,23 +17,27 @@ Code -
 #include<iostream>
 using namespace std;
 
-int fibo(int n) {
-    if(n == 0)
+int fibo (int n)
+{
+    if (n == 0) {
         return 0;
-    if(n == 1)
+    }
+    if (n == 1) {
         return 1;
-    return fibo(n - 1) + fibo(n - 2);
+    }
+    return fibo (n - 1) + fibo (n - 2);
 }
 
-int main() {
+int main()
+{
     int n;
     cout << "Enter the number : ";
     cin >> n;
-    cout << "Fibonacci of " << n << " is " << fibo(n) << endl;
+    cout << "Fibonacci of " << n << " is " << fibo (n) << endl;
     return 0;
 }
 
-/* 
+/*
 Time Complexity:
   ◾ O(2^n) because at each step, two recursive calls are made, leading to exponential growth.
 
@@ -48,5 +52,5 @@ Example Inputs and Outputs:
    Output: Fibonacci of 10 is 55
 
 3. Input: Enter the number : 0
-   Output: Fibonacci of 0 is 0 
+   Output: Fibonacci of 0 is 0
 */
