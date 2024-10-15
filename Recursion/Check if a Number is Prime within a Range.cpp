@@ -14,27 +14,37 @@ Code -
 #include <iostream>
 using namespace std;
 
-bool isPrimeUtil(int n, int i) {
-    if (i * i > n) return true;  // Base case
-    if (n % i == 0) return false;  // Recursive case
-    return isPrimeUtil(n, i + 1);  // Check next divisor
+bool isPrime (int n, int i)
+{
+    if (i * i > n) {
+        return true;
+    }
+    if (n % i == 0) {
+        return false;
+    }
+    return isPrime (n, i + 1);
 }
 
-bool isPrime(int n) {
-    if (n <= 1) return false;  // Base case
-    return isPrimeUtil(n, 2);  // Start checking from 2
+bool isPrimes (int n)
+{
+    if (n <= 1) {
+        return false;
+    }
+    return isPrime (n, 2);
 }
 
-int main() {
+int main()
+{
     int low = 1, high = 10;
     for (int n = low; n <= high; ++n) {
-        cout << n << (isPrime(n) ? " is prime." : " is not prime.") << endl;
+        cout << n << (isPrimes (n) ? " is prime." : " is not prime.") << endl;
     }
     return 0;
 }
 /*
 ◾ Time Complexity: O(sqrt(n))
-  The function checks divisibility up to the square root of each number in the range, leading to a time complexity of O(sqrt(n)) for each number.
+  The function checks divisibility up to the square root of each number in the range,
+  leading to a time complexity of O(sqrt(n)) for each number.
 
 ◾ Space Complexity: O(sqrt(n))
   The recursion depth is proportional to the square root of n, as it checks divisibility incrementally.
@@ -54,5 +64,4 @@ Output:
     8 is not prime.
     9 is not prime.
     10 is not prime.
-
 */
