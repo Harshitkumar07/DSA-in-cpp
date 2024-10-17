@@ -8,7 +8,7 @@ Approach:
   If n is 1, return 1.
 
 2. Recursive Case:
-  Return n + triangular(n - 1).
+  Return n + ntri (n - 1).
 
 Code -
 */
