@@ -14,16 +14,20 @@ Code -
 #include <iostream>
 using namespace std;
 
-double harmonic(int n) {
-    if (n == 1) return 1;  // Base case
-    return 1.0 / n + harmonic(n - 1);  // Recursive case
+double harmonic (int n)
+{
+    if (n == 1) {
+        return 1;
+    }
+    return 1.0 / n + harmonic (n - 1);
 }
 
-int main() {
+int main()
+{
     int n ;
-    cout<<"Enter the number: ";
-    cin>>n;
-    cout << "The " << n << "th harmonic number is: " << harmonic(n) << endl;
+    cout << "Enter the number: ";
+    cin >> n;
+    cout << "The " << n << "th harmonic number is: " << harmonic (n) << endl;
     return 0;
 }
 /*
