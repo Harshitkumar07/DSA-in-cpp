@@ -7,19 +7,19 @@ Approach:
   If n is 1, return 1.
 
 2. Recursive Case:
- Return 1/n + harmonic(n - 1).
+ Return 1/n + nhar (n - 1).
 
 Code -
 */
 #include <iostream>
 using namespace std;
 
-double harmonic (int n)
+double nhar (int n)
 {
     if (n == 1) {
         return 1;
     }
-    return 1.0 / n + harmonic (n - 1);
+    return 1.0 / n + nhar (n - 1);
 }
 
 int main()
@@ -27,7 +27,7 @@ int main()
     int n ;
     cout << "Enter the number: ";
     cin >> n;
-    cout << "The " << n << "th harmonic number is: " << harmonic (n) << endl;
+    cout << "The " << n << "th harmonic number is: " << nhar (n) << endl;
     return 0;
 }
 /*
