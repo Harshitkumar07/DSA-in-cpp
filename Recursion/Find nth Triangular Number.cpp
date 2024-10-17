@@ -15,16 +15,20 @@ Code -
 #include <iostream>
 using namespace std;
 
-int triangular(int n) {
-    if (n == 1) return 1;  // Base case
-    return n + triangular(n - 1);  // Recursive case
+int ntri (int n)
+{
+    if (n == 1) {
+        return 1;
+    }
+    return n + ntri(n - 1);
 }
 
-int main() {
+int main()
+{
     int n ;
-    cout<<"Enter the number: ";
-    cin>>n;
-    cout << "The " << n << "th triangular number is: " << triangular(n) << endl;
+    cout << "Enter the number: ";
+    cin >> n;
+    cout << "The " << n << "th triangular number is: " << ntri (n) << endl;
     return 0;
 }
 /*
@@ -36,10 +40,10 @@ int main() {
 
 Example Inputs and Outputs:
 
-1. Input: n = 5
+1. Input: Enter the number: 5
   Output: The 5th triangular number is: 15
 
-2. Input: n = 3
+2. Input: Enter the number: 3
   Output: The 3rd triangular number is: 6
 
 */
