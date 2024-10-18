@@ -13,6 +13,7 @@ Approach:
     If the target is less than the middle element, search the left half (start to mid-1).
     If the target is greater than the middle element, search the right half (mid+1 to end).
 */
+
 #include<iostream>
 using namespace std;
 
