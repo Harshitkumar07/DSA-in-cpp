@@ -1,0 +1,35 @@
+** Leetcode Problem :- **
+
+
+
+** Code :- **
+
+class Solution {
+public:
+    bool canPartition(const string& s, int target, int idx = 0,
+                      int currSum = 0) {
+        if (idx == s.length()) {
+            return currSum == target;
+        }
+        int num = 0;
+        for (int i = idx; i < s.length(); i++) {
+            num = num * 10 + (s[i] - '0');
+            if (canPartition(s, target, i + 1, currSum + num)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    int punishmentNumber(int n) {
+        int ans = 0;
+        for (int i = 1; i <= n; i++) {
+            int square = i * i;
+            if (canPartition(to_string(square), i)) {
+                ans += square;
+            }
+        }
+        return ans;
+    }
+};
+
