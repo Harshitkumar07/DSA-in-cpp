@@ -1,0 +1,31 @@
+** Leetcode Problem :- **
+
+
+
+** Code :- **
+
+class Solution {
+public:
+    ListNode* deleteDuplicates(ListNode* head) {
+        if (!head)
+            return NULL;
+        ListNode *curr = head, *prev = NULL;
+        while (curr) {
+            if (curr->next && curr->val == curr->next->val) {
+                while (curr->next && curr->val == curr->next->val) {
+                    curr = curr->next;
+                }
+                if (prev) {
+                    prev->next = curr->next;
+                } else {
+                    head = curr->next;
+                }
+            } else {
+                prev = curr;
+            }
+            curr = curr->next;
+        }
+        return head;
+    }
+};
+
