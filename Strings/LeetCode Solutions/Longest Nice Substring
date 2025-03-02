@@ -1,0 +1,33 @@
+** Leetcode Problem :- **
+
+
+
+** Code :- **
+
+class Solution {
+public:
+    string longestNiceSubstring(string s) {
+        int maxLen = 0;
+        string longestSubstr;
+        for (int i = 0; i < s.size(); i++) {
+            unordered_set<char> set;
+            for (int j = i; j < s.size(); j++) {
+                set.insert(s[j]);
+                bool isNice = true;
+                for (char c : set) {
+                    if (set.find(toupper(c)) == set.end() ||
+                        set.find(tolower(c)) == set.end()) {
+                        isNice = false;
+                        break;
+                    }
+                }
+                if (isNice && (j - i + 1) > maxLen) {
+                    maxLen = j - i + 1;
+                    longestSubstr = s.substr(i, maxLen);
+                }
+            }
+        }
+        return longestSubstr;
+    }
+};
+
