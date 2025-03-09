@@ -1,0 +1,24 @@
+** Leetcode Problem :- **
+
+
+
+** Code :- **
+
+class Solution {
+public:
+    vector<int> majorityElement(vector<int>& nums) {
+        int n = nums.size() / 3;
+        unordered_map<int, int> map;
+        vector<int> ans;
+        for (auto num : nums) {
+            map[num]++;
+        }
+        for (auto num : map) {
+            if (num.second > n) {
+                ans.push_back(num.first);
+            }
+        }
+        return ans;
+    }
+};
+
