@@ -1,0 +1,32 @@
+** Leetcode Problem :- **
+
+
+
+** Code :- **
+
+class StockSpanner {
+public:
+    StockSpanner() {}
+
+    vector<int> span;
+    vector<int> stock;
+    stack<int> s;
+
+    int next(int price) {
+        int i = stock.size();
+        stock.push_back(price);
+        span.push_back(1);
+
+        while (!s.empty() && stock[s.top()] <= price) {
+            s.pop();
+        }
+        if (!s.empty()) {
+            span[i] = i - s.top();
+        } else {
+            span[i] = i + 1;
+        }
+        s.push(i);
+        return span[i];
+    }
+};
+
