@@ -1,0 +1,39 @@
+** Leetcode Problem :- **
+
+
+
+** Code :- **
+
+class Solution {
+public:
+    bool canAllocateCandies(const vector<int>& candies, long long k,
+                            int target) {
+        long long count = 0;
+        for (int num : candies) {
+            count += num / target;
+            if (count >= k)
+                return true;
+        }
+        return false;
+    }
+    int maximumCandies(vector<int>& candies, long long k) {
+        int low = 1, high = 0;
+        for (int num : candies) {
+            if (num > high) {
+                high = num;
+            }
+        }
+        int ans = 0;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (canAllocateCandies(candies, k, mid)) {
+                ans = mid;
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return ans;
+    }
+};
+
