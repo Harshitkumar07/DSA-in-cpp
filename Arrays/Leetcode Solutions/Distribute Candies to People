@@ -1,0 +1,21 @@
+** Leetcode Problem :- **
+
+
+
+** Code :- **
+
+class Solution {
+public:
+    vector<int> distributeCandies(int candies, int num_people) {
+        vector<int> ans(num_people, 0);
+        int i = 0, candyCount = 1;
+        while (candies > 0) {
+            ans[i] += min(candyCount, candies);
+            candies -= min(candyCount, candies);
+            i = (i + 1) % num_people;
+            candyCount++;
+        }
+        return ans;
+    }
+};
+
