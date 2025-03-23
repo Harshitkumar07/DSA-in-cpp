@@ -1,0 +1,36 @@
+** Leetcode Problem :- **
+
+
+
+** Code :- **
+
+class Solution {
+public:
+    int scoreOfParentheses(string s) {
+        stack<int> st;
+        for (char c : s) {
+            if (c == '(') {
+                st.push(-1);
+            } else {
+                int score = 0;
+                while (st.top() != -1) {
+                    score += st.top();
+                    st.pop();
+                }
+                st.pop();
+                if (score == 0) {
+                    st.push(1);
+                } else {
+                    st.push(score * 2);
+                }
+            }
+        }
+        int totalScore = 0;
+        while (!st.empty()) {
+            totalScore += st.top();
+            st.pop();
+        }
+        return totalScore;
+    }
+};
+
