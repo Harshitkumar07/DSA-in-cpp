@@ -15,54 +15,59 @@ Output: false
 
 class Solution {
 public:
-    bool isSameTree(TreeNode* p, TreeNode* q) {
-        if (p == NULL && q == NULL)
+    bool isSame(TreeNode* r1, TreeNode* r2) {
+        if (r1 == nullptr && r2 == nullptr) {
             return true;
-        if (p == NULL || q == NULL)
+        }
+        if (r1 == nullptr || r2 == nullptr) {
             return false;
-        if (p->val != q->val)
+        }
+        if (r1->val != r2->val) {
             return false;
-        return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
+        }
+        return isSame(r1->left, r2->left) && isSame(r1->right, r2->right);
     }
     bool isSubtree(TreeNode* root, TreeNode* subRoot) {
-        if (root == NULL)
+        if (root == nullptr) {
             return false;
-        if (isSameTree(root, subRoot))
+        }
+        if (isSame(root, subRoot)) {
             return true;
-        return (isSubtree(root->left, subRoot) ||
-                isSubtree(root->right, subRoot));
+        }
+        return isSubtree(root->left, subRoot) ||
+               isSubtree(root->right, subRoot);
     }
 };
 
 ** Time Complexity :- **
     
-Step 1: isSubtree Traversal
-The function checks each node of the main tree (root) to see if a subtree starting from that node matches subRoot.
-In the worst case, it traverses all N nodes in the root tree.
+Step 1: Traversing the root tree
+The function isSubtree recursively visits each node of the root tree to check whether the subRoot matches as a subtree.
+This traversal takes O(n) time, where n is the number of nodes in root, since each node may be a potential root for subRoot.
 
-Step 2: isSameTree Comparison
-For each node in root, it may call isSameTree which compares it with subRoot.
-In the worst case, isSameTree visits all M nodes of subRoot.
-So, for each of the N nodes in root, you may compare up to M nodes of subRoot.
+Step 2: Comparing subtrees (isSame function)
+At each node in root, the function may invoke isSame to compare the subtree rooted at that node with subRoot.
+The isSame function itself performs a recursive comparison of two trees, which takes O(m) time in the worst case, where m is the number of nodes in subRoot.
 
 Total Time Complexity :-
-Best Case: O(N) → If a match is found early in the traversal.
-Worst Case: O(N × M) → When isSameTree is called at every node of root, and each call compares the entire subRoot.
-Overall: O(N × M) (where N = nodes in root, M = nodes in subRoot)
+Best Case: O(n), if subRoot is found at the root of root or very early in the traversal.
+Worst Case: O(n × m), if every node in root is checked and compared with subRoot.
+
+Overall Time Complexity: O(n × m)
+Where n = number of nodes in root, and m = number of nodes in subRoot.
 
 ** Space Complexity :- **
     
-Step 1: Recursion Stack
-The space complexity is determined by the recursive call stack depth.
+Step 1: Recursion stack for isSubtree and isSame
+Both functions are recursive and may go as deep as the height of their respective trees.
+In the worst case (skewed trees), the recursion stack may grow up to O(h), where h is the maximum height between root and subRoot.
 
-In the worst case, both isSubtree and isSameTree can go as deep as the height of the tree:
-For a skewed tree, the height is O(N).
-For a balanced tree, the height is O(log N).
+Step 2: Additional memory
+No additional data structures are used that scale with input size. Only a few integer pointers and comparisons are done during recursion.
 
-Step 2: No Extra Data Structures
-No additional memory beyond the recursion stack is used.
+** Total Space Complexity :- ** 
 
-Total Space Complexity :-
-Best Case: O(log N + log M) → For balanced trees.
-Worst Case: O(N + M) → For skewed trees, both root and subRoot.
-Overall: O(H1 + H2) where H1 and H2 are the heights of root and subRoot.
+Best Case: O(1), if the match is found immediately and trees are very shallow.
+Worst Case: O(h), where h is the height of the tree (up to O(n) in the worst skewed case).
+Overall Space Complexity: O(h)
+Where h is the height of the larger tree.
