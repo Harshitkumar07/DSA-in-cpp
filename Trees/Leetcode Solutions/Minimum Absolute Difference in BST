@@ -1,0 +1,27 @@
+** Leetcode Problem :- **
+
+
+
+** Code : - **
+
+class Solution {
+public:
+    TreeNode* temp = nullptr;
+    void solve(TreeNode* root, int& diff) {
+        if (root == nullptr) {
+            return;
+        }
+        solve(root->left, diff);
+        if (temp) {
+            diff = min(diff, abs(root->val - temp->val));
+        }
+        temp = root;
+        solve(root->right, diff);
+    }
+    int getMinimumDifference(TreeNode* root) {
+        int diff = INT_MAX;
+        solve(root, diff);
+        return diff;
+    }
+};
+
