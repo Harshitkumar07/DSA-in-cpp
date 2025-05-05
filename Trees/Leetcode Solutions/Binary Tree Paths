@@ -1,0 +1,28 @@
+** Leetcode Problem :- ** 
+
+
+
+** Code :- **
+
+class Solution {
+public:
+    void solve(TreeNode* node, string currPath, vector<string>& ans) {
+        if (node == nullptr) {
+            return;
+        }
+        currPath += to_string(node->val);
+        if (!node->left && !node->right) {
+            ans.push_back(currPath);
+        } else {
+            currPath += "->";
+            solve(node->left, currPath, ans);
+            solve(node->right, currPath, ans);
+        }
+    }
+    vector<string> binaryTreePaths(TreeNode* root) {
+        vector<string> ans;
+        solve(root, "", ans);
+        return ans;
+    }
+};
+
