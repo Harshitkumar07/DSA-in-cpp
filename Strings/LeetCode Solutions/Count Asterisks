@@ -1,0 +1,22 @@
+** Leetcode Problem :- **
+
+
+
+** Code :- **
+
+class Solution {
+public:
+    int countAsterisks(string s) {
+        int count = 0;
+        bool bars = false;
+        for (char ch : s) {
+            if (ch == '|') {
+                bars = !bars;
+            } else if (ch == '*' && !bars) {
+                count++;
+            }
+        }
+        return count;
+    }
+};
+
