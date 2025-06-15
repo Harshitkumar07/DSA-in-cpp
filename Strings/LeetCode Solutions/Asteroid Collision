@@ -1,0 +1,35 @@
+** Leetcode Problem :- **
+
+
+
+** Code :- **
+
+class Solution {
+public:
+    vector<int> asteroidCollision(vector<int>& asteroids) {
+        stack<int> stack;
+        for (int ast : asteroids) {
+            while (!stack.empty() && ast < 0 && stack.top() > 0) {
+                if (stack.top() < -ast) {
+                    stack.pop();
+                    continue;
+                } else if (stack.top() == -ast) {
+                    stack.pop();
+                }
+                ast = 0;
+                break;
+            }
+            if (ast != 0) {
+                stack.push(ast);
+            }
+        }
+        vector<int> ans;
+        while (!stack.empty()) {
+            ans.push_back(stack.top());
+            stack.pop();
+        }
+        reverse(ans.begin(), ans.end());
+        return ans;
+    }
+};
+
